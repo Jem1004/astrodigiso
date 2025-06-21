@@ -7,26 +7,26 @@ import { Target, Eye, Users, Award } from 'lucide-react';
 const AboutTeam = () => {
   const teamMembers = [
     {
-      name: 'Ahmad Rizki',
+      name: 'Irawan',
       role: 'CEO & Founder',
       image: '/api/placeholder/300/300',
       bio: 'Visioner dengan pengalaman 10+ tahun dalam industri teknologi'
     },
     {
-      name: 'Sarah Putri',
-      role: 'CTO',
+      name: 'R. Aditia P.W',
+      role: 'CO-Founder',
       image: '/api/placeholder/300/300',
       bio: 'Expert dalam arsitektur sistem dan pengembangan aplikasi skala besar'
     },
     {
-      name: 'Budi Santoso',
-      role: 'Lead Designer',
+      name: 'Sadriansyah',
+      role: 'Lead Developer',
       image: '/api/placeholder/300/300',
       bio: 'Desainer kreatif dengan fokus pada user experience dan interface design'
     },
     {
-      name: 'Maya Sari',
-      role: 'Project Manager',
+      name: 'Renaldi Pramana',
+      role: 'Customer Service',
       image: '/api/placeholder/300/300',
       bio: 'Ahli dalam manajemen proyek dengan track record pengiriman tepat waktu'
     }
@@ -161,20 +161,6 @@ const AboutTeam = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  style={{
-                    width: '6rem',
-                    height: '6rem',
-                    borderRadius: '50%',
-                    margin: '0 auto',
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-              </div>
               <h4 style={{
                 fontSize: '1.25rem',
                 fontWeight: 700,

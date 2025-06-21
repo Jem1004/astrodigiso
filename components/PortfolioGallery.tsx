@@ -145,24 +145,6 @@ const PortfolioGallery = () => {
             >
               {/* Image Container */}
               <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '4/3' }}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform 0.5s ease'
-                  }}
-                />
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
-                  opacity: 0,
-                  transition: 'opacity 0.3s ease'
-                }} />
                 
                 {/* Action Buttons */}
                 <div style={{

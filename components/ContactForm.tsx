@@ -51,19 +51,19 @@ const ContactForm = () => {
     {
       icon: <Mail style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: 'Email',
-      value: 'hello@astrodigital.com',
+      value: 'info@astrods.id',
       link: 'mailto:hello@astrodigital.com'
     },
     {
       icon: <Phone style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: 'Telepon',
-      value: '+62 812-3456-7890',
-      link: 'tel:+6281234567890'
+      value: '+62 21-5873-6885',
+      link: 'tel:+6282158736885'
     },
     {
       icon: <MapPin style={{ width: '1.5rem', height: '1.5rem' }} />,
       title: 'Alamat',
-      value: 'Jakarta, Indonesia',
+      value: 'Kalimantan Timur, Penajam Paser Utara, Babulu Darat 76285',
       link: '#'
     }
   ];

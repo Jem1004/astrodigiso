@@ -48,34 +48,6 @@ const SiteFooter = () => {
               Dengan teknologi terdepan dan tim berpengalaman, kami siap mewujudkan visi digital Anda.
             </p>
             
-            {/* Social Links */}
-            <div>
-              <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '1rem' }}>Ikuti Kami</h4>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    style={{
-                      background: '#1f2937',
-                      padding: '0.75rem',
-                      borderRadius: '50%',
-                      transition: 'all 0.3s ease',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}
-                  >
-                    <span style={{ transition: 'transform 0.3s ease' }}>
-                      {social.icon}
-                    </span>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Quick Links */}
