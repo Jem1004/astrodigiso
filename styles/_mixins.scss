@@ -1,0 +1,119 @@
+@use "variables" as *;
+
+// Media Queries
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+// Flexbox Utilities
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Glass Effect
+@mixin glass-effect {
+  background: $color-glass-bg;
+  backdrop-filter: blur(10px);
+  border: 1px solid $color-glass-border;
+}
+
+// Gradient Text
+@mixin gradient-text {
+  background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Animations
+@mixin fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@mixin slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@mixin float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+// Utility Classes
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@mixin btn-primary {
+  background: $color-primary;
+  color: $color-white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $color-secondary;
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive Typography
+@mixin heading-xl {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+  
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin heading-lg {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  
+  @include mobile {
+    font-size: 1.75rem;
+  }
+}

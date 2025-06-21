@@ -1,0 +1,195 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Reset and Base Styles
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background: $color-white;
+  min-height: 100vh;
+}
+
+// Container
+.container {
+  @include container;
+}
+
+// Utility Classes
+.glass {
+  @include glass-effect;
+}
+
+.gradient-text {
+  @include gradient-text;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+// Button Styles
+.btn-primary {
+  @include btn-primary;
+}
+
+// Typography
+.heading-xl {
+  @include heading-xl;
+}
+
+.heading-lg {
+  @include heading-lg;
+}
+
+// Layout
+.main-content {
+  min-height: 100vh;
+}
+
+.section {
+  padding: 4rem 0;
+  
+  @include mobile {
+    padding: 2rem 0;
+  }
+}
+
+// Loading Spinner
+.loading-spinner {
+  @include flex-center;
+  padding: 5rem 0;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid rgba($color-primary, 0.3);
+  border-top: 4px solid $color-primary;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+// Hero Section Styles
+.hero-section {
+  min-height: 100vh;
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f8f0ff 100%);
+}
+
+.hero-bg-element {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(40px);
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+  
+  &.bg-blue {
+    background: #93c5fd;
+    top: 5rem;
+    left: 5rem;
+  }
+  
+  &.bg-purple {
+    background: #c4b5fd;
+    top: 10rem;
+    right: 5rem;
+    animation-delay: 2s;
+  }
+  
+  &.bg-pink {
+    background: #f9a8d4;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 4s;
+  }
+}
+
+// Animation Classes
+.fade-in {
+  @include fade-in;
+}
+
+.slide-up {
+  @include slide-up;
+}
+
+.float {
+  @include float-animation;
+}
+
+// Keyframes
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Navigation Styles
+.desktop-nav {
+  @include mobile {
+    display: none !important;
+  }
+  
+  @include tablet {
+    display: none !important;
+  }
+  
+  @include desktop {
+    display: flex !important;
+  }
+}
