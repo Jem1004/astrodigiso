@@ -114,7 +114,7 @@ const SiteFooter = () => {
             © 2025 Astro Digital Solution. Semua hak dilindungi.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.875rem' }}>
-            <a href="#" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.3s ease' }}>Kebijakan Privasi</a>
+            <a href="/privacy" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.3s ease' }}>Kebijakan Privasi</a>
             <a href="#" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.3s ease' }}>Syarat & Ketentuan</a>
             <a href="#" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.3s ease' }}>Sitemap</a>
           </div>

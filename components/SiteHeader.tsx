@@ -17,11 +17,12 @@ const SiteHeader = () => {
   }, []);
 
   const navItems = [
-    { href: '#hero', label: 'Beranda' },
-    { href: '#services', label: 'Layanan' },
-    { href: '#portfolio', label: 'Portofolio' },
-    { href: '#about', label: 'Tentang' },
-    { href: '#contact', label: 'Kontak' },
+    { href: '/#hero', label: 'Beranda' },
+    { href: '/#services', label: 'Layanan' },
+    { href: '/#portfolio', label: 'Portofolio' },
+    { href: '/#about', label: 'Tentang' },
+    { href: '/#contact', label: 'Kontak' },
+    { href: '/privacy', label: 'Kebijakan Privasi' },
   ];
 
   return (
@@ -40,7 +41,7 @@ const SiteHeader = () => {
         <div className="flex-between" style={{ padding: '1rem 0' }}>
           {/* Logo */}
           <motion.a 
-            href="#hero" 
+            href="/#hero" 
             className="gradient-text"
             style={{ 
               fontSize: '1.5rem', 
